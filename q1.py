@@ -52,7 +52,18 @@ def first_stable_character(s):
         None
     """
     # TODO: Implement your solution here
-    pass
+    n = len(s)
+    i = 0
+    while i < n:
+      j = i
+    while j < n and s[j] == s[i]:
+      j += 1
+      group_length = j - i
+      if group_length >= 2:
+        if s.count(s[i]) == group_length:
+          return s[i]
+          i = j
+    return None
 
 
 if __name__ == "__main__":
