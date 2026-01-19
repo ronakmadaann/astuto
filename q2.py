@@ -65,7 +65,16 @@ def compressed_stack_length(lst):
         0
     """
     # TODO: Implement your solution here
-    
+    count = 0
+    for i in range(len(lst)):
+      if lst[i] == lst[i-1]:
+        count = count - 1
+      else:
+        count = count + 1
+    if count < 0:
+      return 0
+    else:
+      return count
     pass
 
 
